@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="fr top-item" id="top">
+        <p><i class="fa-solid fa-clock"></i> Monday to Sunday</p>
+        <a href="https://www.google.com/maps/place/28+Molotto+St,+Bela-Bela,+0480/@-24.8878536,28.3033432,17z/data=!3m1!4b1!4m5!3m4!1s0x1ebf7329891295df:0x740534a7334ad521!8m2!3d-24.8878536!4d28.3055319" target="_blank"><i class="fa-solid fa-location-dot"></i> 28 Moloto street, Bela-Bela, 0480</a>
+        <a href="https://popia.co.za/" target="_blank"><i class="fa-solid fa-legal"></i> POPIA Compliant</a>
+        <a href="https://www.facebook.com/helgeo.guesthouse.09" target="_blank"><i class="fa-brands fa-facebook" ></i> Facebook</a>
+        <p><i class="fa-solid fa-phone"></i> 072 380 3066</p>
+    </div>
+    <div class="header">
+    </div>
+
+    <div class="content w-80">
+        <h1 id="accommodation-title"></h1>
+        <p>Please Note:All images are for reference & illustration purposes.Units might vary in layout & size for different options.</p>
+        <div class="fr">
+            <img class="flx-1 floor-plan">
+            <div id="bottom-pictures">
+                <div class='fr-c rl image-scroll'>
+                    <i class="fa-solid fa-chevron-left rd-50 ab lt-10" id="left-scroll" onclick="moveSlide(-1)"></i>
+                    <i class="fa-solid fa-chevron-right rd-50 ab rt-10" id="right-scroll" onclick="moveSlide(1)"></i>
+                </div>
+            </div>
+        </div>
+        <div class="flx-1 p-l-20">
+            <h2>Features</h2>
+            <div class="fr">
+                <div class="unit-features flx-1">
+
+                </div>
+                <div class="flx-1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const unitFeature = document.querySelector('.unit-features');
+        const bottomPictures = document.querySelector('#bottom-pictures');
+        const accommodateObject = JSON.parse(localStorage.getItem('accommodation'))
+        document.querySelector("#accommodation-title").innerHTML = `
+        ${accommodateObject.name}
+        <span style="
+        color: black;
+        border-radius:30px;
+        font-size: 14px;
+        padding:5px 10px;
+        // border:1px solid;
+        font-family:"montserrat-light";
+        ">
+            ${accommodateObject.catering}
+            </span>
+            <span">
+            <i class="fa-solid fa-tag"></i> 
+            R${accommodateObject.price}
+            </span>
+        `;
+        document.querySelector('.floor-plan').src = accommodateObject.floorPlan;
+
+        accommodateObject.features.forEach(item => {
+            const feature = document.createElement('div');
+            feature.innerHTML = item;
+            feature.classList.add("feature");
+            unitFeature.append(feature);
+        })
+        document.title = localStorage.getItem('title');
+        accommodateObject.photos.forEach((item, index) => {
+            const bottomPicture = document.createElement('img');
+            bottomPicture.style.width = '40%';
+            bottomPicture.classList.add('bottom-picture');
+            bottomPicture.classList.add('carousel-image');
+            bottomPicture.src = item;
+            bottomPictures.append(bottomPicture)
+        })
+    </script>
+    <div class="footer">
+    </div>
+    <script src="../scripts/header.js" type="module"></script>
+    <script src="../scripts/accommodation.js" type="module"></script>
+    <script src="../scripts/scroll.js"></script>
+</body>
+
+</html>
+
+</html>
+
+</html>

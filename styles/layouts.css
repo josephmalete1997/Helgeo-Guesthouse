@@ -1,0 +1,119 @@
+.fr {
+    display: flex;
+}
+
+.fr-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc {
+    display: flex;
+    flex-direction: column;
+}
+
+.flx-1 {
+    flex: 1;
+}
+
+.flx-2 {
+    flex: 2;
+}
+
+.flx-3 {
+    flex: 3;
+}
+
+.flx-4 {
+    flex: 4;
+}
+
+.flx-4 {
+    flex: 4;
+}
+
+.flx-5 {
+    flex: 5;
+}
+
+@media screen and (max-width:600px) {
+    .fr {
+        flex-direction: column;
+    }
+    .flx-1,
+    .flx-2,
+    .flx-3,
+    .flx-4,
+    .flx-5 {
+        flex: 1;
+    }
+    .w-70,
+    .w-80,
+    .w-90 {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+
+/* padding */
+
+.p-1 {
+    padding: 1px;
+}
+
+.p-l-1 {
+    padding-left: 1px;
+}
+
+.p-l-50 {
+    padding-left: 50px;
+}
+
+.p-r-1 {
+    padding-right: 1px;
+}
+
+.p-t-1 {
+    padding-top: 1px;
+}
+
+.p-b-1 {
+    padding-bottom: 1px;
+}
+
+
+/* relative */
+
+.rl {
+    position: relative;
+}
+
+
+/* absolute */
+
+.ab {
+    position: absolute;
+}
+
+
+/* radius */
+
+.rd-50 {
+    border-radius: 10px;
+}
+
+
+/* left */
+
+.lt-10 {
+    left: 10px;
+}
+
+
+/* right */
+
+.rt-10 {
+    right: 10px;
+}

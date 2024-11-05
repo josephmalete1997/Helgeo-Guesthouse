@@ -1,0 +1,25 @@
+.header .nav a.booking {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 40px;
+    padding: 0 10px;
+    border: 2px solid;
+}
+
+.header .nav a.booking:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid;
+}
+
+a.go-to-top {
+    background: white;
+    padding: 10px 20px;
+    color: black;
+    transition: .5s;
+}
+
+a.go-to-top:hover {
+    color: black;
+    border-radius: 50px;
+}

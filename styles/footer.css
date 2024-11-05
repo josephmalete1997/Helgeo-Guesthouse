@@ -1,0 +1,18 @@
+.footer {
+    background: black;
+    color: white;
+    width: 80%;
+    padding: 2% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.footer a:hover {
+    color: orange;
+}
