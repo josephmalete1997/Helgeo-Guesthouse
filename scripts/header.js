@@ -7,15 +7,15 @@ const headerContent = document.createElement('div');
 headerContent.className = 'fc';
 header.innerHTML = `
 <div class="nav">
-<a href="/"><img src="../logo-helgeo.png" alt="logo" width="60%"></a>
-    <a href="/">Home</a>
-    <a href="/gallery">Gallery</a>
+<a href="./"><img src="../logo-helgeo.png" alt="logo" width="60%"></a>
+    <a href="./">Home</a>
+    <a href="./gallery">Gallery</a>
     <a href="#" class="sub-item">Accommodation
     <div class="sub-nav"></div>
     </a>
-    <a href="">Specials</a>
-    <a href="/contact">Contact</a>
-    <a href="" class="booking"><i class="fa-solid fa-calendar"></i> Bookings</a>
+    <a href="./">Specials</a>
+    <a href="./contact">Contact</a>
+    <a href="./" class="booking"><i class="fa-solid fa-calendar"></i> Bookings</a>
 </div>`;
 
 footer.innerHTML = `  
@@ -27,14 +27,14 @@ footer.innerHTML = `
 <p>Also visit: Bela-Bela Guesthouse</p>
 </div>
 <div class="fc">
-<a href="/">Home</a>
-    <a href="/gallery">Gallery</a>
+<a href="./">Home</a>
+    <a href="./gallery">Gallery</a>
     <a href="#" class="sub-item">Accommodation
     <div class="sub-nav"></div>
     </a>
-    <a href="">Specials</a>
-    <a href="/contact">Contact</a>
-    <a href="" class="booking"><i class="fa-solid fa-calendar"></i> Bookings</a>
+    <a href="./">Specials</a>
+    <a href="./contact">Contact</a>
+    <a href="./" class="booking"><i class="fa-solid fa-calendar"></i> Bookings</a>
 </div>
 <div class="fc">
 <a href="#top" class="go-to-top">Go to top</a>
