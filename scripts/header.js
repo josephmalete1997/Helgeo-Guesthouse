@@ -7,7 +7,7 @@ const headerContent = document.createElement('div');
 headerContent.className = 'fc';
 header.innerHTML = `
 <div class="nav">
-<a href="./"><img src="../logo-helgeo.png" alt="logo" width="60%"></a>
+<a href="./"><img src="./logo-helgeo.png" alt="logo" width="60%"></a>
     <a href="./">Home</a>
     <a href="./gallery">Gallery</a>
     <a href="#" class="sub-item">Accommodation
