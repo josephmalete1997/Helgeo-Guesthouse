@@ -14,7 +14,7 @@ header.innerHTML = `
     <div class="sub-nav"></div>
     </a>
     <a href="./">Specials</a>
-    <a href="./contact">Contact</a>
+    <a href="./contact/index.php">Contact</a>
     <a href="./" class="booking"><i class="fa-solid fa-calendar"></i> Bookings</a>
 </div>`;
 
