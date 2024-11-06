@@ -9,6 +9,10 @@
                         user-select: none;
                     }
                     
+                    html {
+                        scroll-behavior: smooth;
+                    }
+                    
                     h1 {
                         font-family: 'montserrat-extra-bold', Arial, Helvetica, sans-serif;
                     }
@@ -93,9 +97,8 @@
                     }
                     
                     .unit {
-                        margin: 10px;
                         border-bottom: 1px solid #ccc;
-                        padding: 5px;
+                        padding: 10px 5px;
                         margin-left: 0;
                         transition: .3s;
                     }
@@ -159,7 +162,7 @@
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
-                        background-image: url('../gallery/unit4/d1.jpg');
+                        background-image: url('../gallery_images/unit4/d1.jpg');
                         cursor: pointer;
                     }
                     
@@ -168,7 +171,7 @@
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
-                        background-image: url('../gallery/unit4/d3.jpg');
+                        background-image: url('../gallery_images/unit4/d3.jpg');
                     }
                     
                     .content .images .fr .img:nth-child(2) {
@@ -177,7 +180,7 @@
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
-                        background-image: url('../gallery/unit4/d5.jpg');
+                        background-image: url('../gallery_images/unit4/d5.jpg');
                     }
                     
                     .content p {

@@ -70,7 +70,7 @@ unitsList[3].addEventListener('click',()=>{
 function saveUnit(unit){
     localStorage.setItem('title', unit.name);
     localStorage.setItem('accommodation', JSON.stringify(unit));
-    window.location.href = '/accommodation?';
+    window.location.href = './accommodation';
 }
 
 let ticking = false;
@@ -84,11 +84,14 @@ function updateSubNavPosition() {
 
 }
 
+document.querySelector(".sub-item").addEventListener('mouseover',()=>{
+  updateSubNavPosition();
+})
+
 function onScroll() {
     if (!ticking) {
         window.requestAnimationFrame(() => {
             updateSubNavPosition();
-            console.log('Scroll event fired!');
             ticking = false;
         });
         ticking = true;
@@ -97,6 +100,8 @@ function onScroll() {
 
 // Initial positioning
 updateSubNavPosition();
+
+
 
 // Listen for scroll events
 window.addEventListener('scroll', onScroll);
