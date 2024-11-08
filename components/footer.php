@@ -21,6 +21,7 @@
         <a href="#top" class="go-to-top">Go to top</a>
     </div>
 </div>
+<script src="./scripts/units_data.js" type="module"></script>
 <script src="./scripts/header.js" type="module"></script>
 <script src="./scripts/nav.js" type="module"></script>
 <script src="./scripts/gallery.js" type="module"></script>

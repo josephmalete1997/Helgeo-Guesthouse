@@ -4,10 +4,10 @@ include './components/header.php';
 <div class="content fr w-80">
     <div class="flx-4">
         <div class="fr-c w-100">
-            <div class="gallery-nav-item active">Two Sleeper Unit(A)</div>
-            <div class="gallery-nav-item">Two Sleeper Unit(B)</div>
-            <div class="gallery-nav-item">Four Sleeper Unit</div>
-            <div class="gallery-nav-item">Six Sleeper Unit</div>
+            <div class="gallery-nav-item active"></div>
+            <div class="gallery-nav-item"></div>
+            <div class="gallery-nav-item"></div>
+            <div class="gallery-nav-item"></div>
         </div>
         <div class="fr-c picture-gallery w-100 rl">
             <p id="category">Self-Catering</p>
@@ -27,6 +27,10 @@ include './components/header.php';
         </div>
     </div>
 </div>
+<script>
+    document.title = "Gallery";
+    document.querySelectorAll('.header .nav a')[2].classList.add('active-nav');
+</script>
 <?php
 include './components/footer.php';
 ?>

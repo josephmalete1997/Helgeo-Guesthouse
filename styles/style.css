@@ -135,9 +135,14 @@
                         border-bottom: 2px solid rgb(88, 88, 88);
                     }
                     
+                    .header .nav a.active-nav {
+                        border-bottom: 2px solid rgb(88, 88, 88);
+                    }
+                    
                     .content {
                         width: 80%;
                         margin: 2% 10%;
+                        margin-top: 50px;
                     }
                     
                     .content .images {

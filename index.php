@@ -1,11 +1,133 @@
 <?php
 include './components/header.php';
 ?>
+<div class="home-slide">
+    <!-- <img src="./home_images/head_1.jpg" width="100%"> -->
+    <div class="home-slide-content">
+        <h1>Welcome to Helgeo Guesthouse</h1>
+        <div class="description"><p><span>1</span> located in Bela Bela township</p></div>
+        <a href="#start">Scroll Down</a>
+    </div>
+</div>
+<style>
+    .home-slide {
+        width: 100%;
+        height: 600px;
+        background: black;
+        background-image: url("./home_images/head_1.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        animation: bg 5s linear infinite;
+        transition: .3s;
+    }
 
+    @keyframes bg {
+        0% {
+            background-size: 100%;
+        }
+
+        75% {
+            background-size: 120%;
+        }
+
+        95% {
+            background-size: 200%;
+        }
+
+        100% {
+            background-size: 180%;
+        }
+    }
+
+    .home-slide-content {
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        background: rgb(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10%;
+        /* padding-top: 10%; */
+        top: 0;
+        left: 0;
+    }
+
+    .home-slide-content a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .home-slide-content a:hover {
+        text-decoration: none;
+        color: orange;
+    }
+
+    .home-slide-content h1 {
+        font-size: 56px;
+    }
+
+    .description {
+        /* display: flex; */
+        font-size: 20px;
+    } 
+    .description p{
+        display: flex;
+    }
+
+    .description span {
+        width: 20px;
+        height: 20px;
+        background: white;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 30px;
+        padding: 5px;
+    }
+</style>
+<script>
+    const imagesObject = [{
+        image: "./home_images/head_1.jpg",
+        title: "",
+        description: "<p><span>2</span> located in Bela Bela township</p>",
+    }, {
+        image: "./home_images/head_2.jpg",
+        title: "",
+        description: "<p><span>3</span> located in Bela Bela township</p>",
+    }, {
+        image: "./home_images/head_3.jpg",
+        title: "",
+        description: "<p><span>4</span> located in Bela Bela township</p>",
+    }, ]
+    const welcomeSlide = document.querySelector('.home-slide');
+    const description = document.querySelector('.description');
+    let count = 0;
+
+    function homeSlide() {
+        count++;
+        if (count > imagesObject.length - 1) {
+            count = 0
+            description.innerHTML = "";
+            description.innerHTML = `<p><span>1</span> located in Bela Bela township</p>`;
+        };
+        welcomeSlide.style.backgroundImage = `url(${imagesObject[count].image})`;
+        description.innerHTML += `${imagesObject[count].description}`;
+    }
+
+    setInterval(() => {
+        homeSlide()
+    }, 5000);
+</script>
+<div id="start"></div>
 <div class="content">
+    <h1>About Us</h1>
     <div class="fr">
         <div class="flx-1">
-            <h1>About Us</h1>
             <p>Helgeo Guesthouse is located in Bela Bela township(28 Moloto street) 2.2 km away from the hot water
                 springs(Warmbaths).<br><br> Helgeo Guesthouse surroundings offer its guests easy access to shopping
                 complex, ATMs, filling stations, restaurants
@@ -60,8 +182,7 @@ include './components/header.php';
                     <span><i class="fa-solid fa-car b"></i>
                         <p>5 minutes driving</p>
                     </span>
-                    <a href="https://www.google.com/maps/dir/28+Molotto+St,+Bela-Bela,+0480/Bela+Mall,+Bela-Bela,+0480/@-24.8914609,28.295091,16z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x1ebf7329896dd041:0x75e9628e76457847!2m2!1d28.305518!2d-24.8878587!1m5!1m1!1s0x1ebf0cd3b1b6930b:0x41285652302a9db7!2m2!1d28.2950463!2d-24.8952382?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank"><i class="fa-solid fa-diamond-turn-right"></i>
+                    <a href="https://www.google.com/maps/dir/28+Molotto+St,+Bela-Bela,+0480/Bela+Mall,+Bela-Bela,+0480/@-24.8914609,28.295091,16z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x1ebf7329896dd041:0x75e9628e76457847!2m2!1d28.305518!2d-24.8878587!1m5!1m1!1s0x1ebf0cd3b1b6930b:0x41285652302a9db7!2m2!1d28.2950463!2d-24.8952382?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fa-solid fa-diamond-turn-right"></i>
                         <p>Direction</p>
                     </a>
                 </div>
@@ -87,13 +208,17 @@ include './components/header.php';
     </div>
 </div>
 <style>
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid#ccc;
-}
+    .card {
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
 </style>
+<script>
+    document.title = "Home";
+    document.querySelectorAll('.header .nav a')[1].classList.add('active-nav');
+</script>
 <?php
 include './components/footer.php';
 ?>

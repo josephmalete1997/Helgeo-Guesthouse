@@ -1,3 +1,7 @@
+<?php 
+include './config/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +18,6 @@
     <link rel="stylesheet" href="styles/accommodation.css" />
     <link rel="stylesheet" href="styles/facilities.css" />
     <script src="https://kit.fontawesome.com/062d0051ac.js" crossorigin="anonymous"></script>
-    <title>Home</title>
 </head>
 
 <body>
@@ -33,7 +36,9 @@
             <a href="./">Home</a>
             <a href="./gallery">Gallery</a>
             <a href="#" class="sub-item">Accommodation
-                <div class="sub-nav"></div>
+                <div class="sub-nav">
+                    
+                </div>
             </a>
             <a href="./specials">Specials</a>
             <a href="./contact">Contact</a>
