@@ -1,4 +1,4 @@
-<?php 
+<?php
 include './config/db.php';
 ?>
 
@@ -8,7 +8,7 @@ include './config/db.php';
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles/layouts.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/footer.css" />
@@ -17,6 +17,8 @@ include './config/db.php';
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/accommodation.css" />
     <link rel="stylesheet" href="styles/facilities.css" />
+    <link rel="stylesheet" href="styles/facilities.css" />
+    <link rel="stylesheet" href="fontAwesome/fontAwesome/css/all.min.css" />
     <script src="https://kit.fontawesome.com/062d0051ac.js" crossorigin="anonymous"></script>
 </head>
 
@@ -31,13 +33,13 @@ include './config/db.php';
         <p><i class="fa-solid fa-phone"></i> 072 380 3066</p>
     </div>
     <div class="header">
+        <a href="./"><img src="./logo-helgeo.png" class="logo-mobile" width=""></a>
+        <a href="./" class="logo"></a>
         <div class="nav">
-            <a href="./"><img src="./logo-helgeo.png" alt="logo" width="60%"></a>
             <a href="./">Home</a>
             <a href="./gallery">Gallery</a>
             <a href="#" class="sub-item">Accommodation
                 <div class="sub-nav">
-                    
                 </div>
             </a>
             <a href="./specials">Specials</a>
@@ -55,7 +57,7 @@ include './config/db.php';
 
     @font-face {
         font-family: 'montserrat-extra-bold';
-        src: url('./Montserrat/Montserrat-Bold.ttf') format('truetype');
+        src: url('./Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
@@ -65,5 +67,46 @@ include './config/db.php';
         src: url('./Montserrat/Montserrat-Medium.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GreatVibes-Regular';
+        src: url('./Montserrat/GreatVibes-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Handycheera Regular';
+        src: url('./Montserrat/Handycheera Regular.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .logo {
+        margin: 5px;
+        margin-left: 200px;
+        background-image: url("./logo-helgeo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 98%;
+        width: 400px;
+        height: 80px;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    @media screen and (max-width:600px) {
+        .logo {
+            display: none;
+        }
+
+        .logo-mobile {
+            display: block;
+            width: 50%;
+            margin: 2% 25%;
+        }
     }
     </style>

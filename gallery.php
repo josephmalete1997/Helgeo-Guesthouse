@@ -3,7 +3,7 @@ include './components/header.php';
 ?>
 <div class="content fr w-80">
     <div class="flx-4">
-        <div class="fr-c w-100">
+        <div class="fr-c w-100 gallery-nav-item-panel">
             <div class="gallery-nav-item active"></div>
             <div class="gallery-nav-item"></div>
             <div class="gallery-nav-item"></div>
@@ -29,7 +29,7 @@ include './components/header.php';
 </div>
 <script>
     document.title = "Gallery";
-    document.querySelectorAll('.header .nav a')[2].classList.add('active-nav');
+    document.querySelectorAll('.header .nav a')[1].classList.add('active-nav');
 </script>
 <?php
 include './components/footer.php';

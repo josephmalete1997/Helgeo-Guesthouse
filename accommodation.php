@@ -105,7 +105,7 @@ document.getElementById('right-scroll').addEventListener('click', () => moveSlid
 
 </script>
 <script>
-    document.querySelectorAll('.header .nav a')[3].classList.add('active-nav');
+    document.querySelectorAll('.header .nav a')[2].classList.add('active-nav');
 </script>
 <?php
 include './components/footer.php';

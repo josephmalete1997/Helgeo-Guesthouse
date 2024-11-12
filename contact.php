@@ -106,12 +106,12 @@ include './components/header.php';
         margin-right: 10px;
         /* border: 2px solid; */
         font-size: 24px;
-        box-shadow: 2px 2px 10px rgb(0, 0, 0, .2);
+        /* box-shadow: 2px 2px 10px rgb(0, 0, 0, .2); */
     }
 </style>
 <script>
     document.title = "Title";
-    document.querySelectorAll('.header .nav a')[5].classList.add('active-nav');
+    document.querySelectorAll('.header .nav a')[4].classList.add('active-nav');
 </script>
 <?php
 include './components/footer.php';

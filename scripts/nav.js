@@ -59,7 +59,15 @@ function addUnitEventListeners() {
     unitsList.forEach((unitElement, index) => {
         unitElement.addEventListener('click', async () => {
             const units = await getUnits();
-            saveUnit(units[index]);
+            if(index===3){
+              saveUnit(units[1]);
+            }else if(index===1){
+              saveUnit(units[2]);
+            }else if(index===2){
+              saveUnit(units[3]);
+            }else{
+              saveUnit(units[index]);
+            }
         });
     });
 }
@@ -95,5 +103,7 @@ function onScroll() {
 // Initial rendering of units
 renderUnits();
 
+// Listen for scroll events
+window.addEventListener('scroll', onScroll);
 // Listen for scroll events
 window.addEventListener('scroll', onScroll);

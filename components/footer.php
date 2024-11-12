@@ -2,9 +2,9 @@
     <div>
         <h1>Contact Us</h1>
         <p>
-            <i class="fa-solid fa-phone"></i> Cellphone :072 380 3066
+            <i class="fa-solid fa-phone"></i> 072 380 3066
         </p>
-        <p><i class="fa-solid fa-envelope"></i> Email: info@helgeo.co.za</p>
+        <p><i class="fa-solid fa-envelope"></i> info@helgeo.co.za</p>
         <p>Also visit: Bela-Bela Guesthouse</p>
     </div>
     <div class="fc">
@@ -21,6 +21,32 @@
         <a href="#top" class="go-to-top">Go to top</a>
     </div>
 </div>
+<style>
+    .footer {
+    background: black;
+    color: white;
+    width: 80%;
+    padding: 2% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.footer a:hover {
+    color: orange;
+}
+
+@media screen and (max-width:600px) {
+    .footer {
+        flex-direction: column;
+    }
+}
+</style>
 <script src="./scripts/units_data.js" type="module"></script>
 <script src="./scripts/header.js" type="module"></script>
 <script src="./scripts/nav.js" type="module"></script>

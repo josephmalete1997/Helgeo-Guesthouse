@@ -4,16 +4,18 @@ include './components/header.php';
 <div class="home-slide">
     <!-- <img src="./home_images/head_1.jpg" width="100%"> -->
     <div class="home-slide-content">
-        <h1>Welcome to Helgeo Guesthouse</h1>
-        <div class="description"><p><span>1</span> located in Bela Bela township</p></div>
-        <a href="#start">Scroll Down</a>
+        <h1>Welcome to <span style="color:orange;font-family:'Handycheera Regular';font-weight:100;">Helgeo Guesthouse</span></h1>
+        <h2>Travellers destination of choice</h2>
+        <div class="description">
+            <p class="first"><span><i class="fa-solid fa-person-booth"></i></span> We Accommodate single travellers, couples, friends and family.</p>
+        </div>
+        <a href="#start"><i class="fa-solid fa-computer-mouse"></i>Scroll Down</a>
     </div>
 </div>
 <style>
     .home-slide {
         width: 100%;
         height: 600px;
-        background: black;
         background-image: url("./home_images/head_1.jpg");
         background-size: cover;
         background-position: center;
@@ -32,12 +34,8 @@ include './components/header.php';
             background-size: 120%;
         }
 
-        95% {
-            background-size: 200%;
-        }
-
         100% {
-            background-size: 180%;
+            background-size: 130%;
         }
     }
 
@@ -45,19 +43,42 @@ include './components/header.php';
         position: absolute;
         width: 90%;
         height: 100%;
-        background: rgb(0, 0, 0, 0.6);
+        background: rgb(0, 0, 0, 0.3);
         color: white;
         display: flex;
         flex-direction: column;
         padding-left: 10%;
-        /* padding-top: 10%; */
         top: 0;
         left: 0;
+    }
+
+    .home-slide-content p {
+        transition: .5s;
+        transform: translateX(-50%);
+        opacity: 0;
+        transform-origin: left;
+    }
+
+    .home-slide-content p.show-point {
+        transform: translateX(0%);
+        opacity: 1;
     }
 
     .home-slide-content a {
         text-decoration: none;
         color: white;
+        position: absolute;
+        right: 10%;
+        top: 60%;
+    }
+
+    .home-slide-content a .fa-solid {
+        margin-right: 5px;
+        transition: .3s;
+    }
+
+    .home-slide-content a:hover .fa-solid {
+        margin-right: 15px;
     }
 
     .home-slide-content a:hover {
@@ -66,15 +87,22 @@ include './components/header.php';
     }
 
     .home-slide-content h1 {
-        font-size: 56px;
+        font-size: 46px;
+    } .home-slide-content h2 {
+        font-family:'GreatVibes-Regular';
+        font-weight:100;
+        margin:0px;
+        font-size:46px;
     }
 
     .description {
         /* display: flex; */
         font-size: 20px;
-    } 
-    .description p{
+    }
+
+    .description p {
         display: flex;
+        align-items: center;
     }
 
     .description span {
@@ -86,37 +114,155 @@ include './components/header.php';
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        margin-right: 30px;
-        padding: 5px;
+        margin-right: 15px;
+        padding: 10px;
+    }
+
+    @media screen and (max-width:600px){
+        @keyframes bg {
+        0% {
+            background-size: 250%;
+        }
+
+        75% {
+            background-size: 270%;
+        }
+
+        100% {
+            background-size: 260%;
+        }}
+        .home-slide {
+            width: 100%;
+            height: 100vh;
+            background-image: url("./home_images/head_1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            animation: none;
+            transition: .3s;
+        }
+    .home-slide-content  {
+        width: 95%;
+        padding:0% 2.5%;
+    }
+    
+    .home-slide-content a {
+       bottom:0%;
+       margin: 50% auto;
+       width:50%;
+       left:30%;
+        right:none;
+        padding: 10px;
+        border-radius: 20px;
+        align-items: center;
+    }
+    
+    .home-slide-content a .fa-solid {
+        margin-right: 5px;
+        transition: .3s;
+    }
+
+    .home-slide-content a:hover .fa-solid {
+        margin-right: 15px;
+    }
+
+    .home-slide-content a:hover {
+        text-decoration: none;
+        color: orange;
+    }
+
+    .home-slide-content h1 {
+        font-size: 32px;
+    }
+    
+    .home-slide-content h2 {
+        font-size: 30px;
+    }
+
+    .description {
+        /* display: flex; */
+        margin-top: 20px;
+    }
+
+    .description p {
+        display: flex;
+        align-items: center; font-size: 16px;
+    }
+
+    .description span {
+        width: 10px;
+        height: 10px;
+        background: white;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 5px;
+        padding: 15px;
+    }
+
     }
 </style>
 <script>
     const imagesObject = [{
         image: "./home_images/head_1.jpg",
-        title: "",
-        description: "<p><span>2</span> located in Bela Bela township</p>",
+        title: ``,
+        description: `<p class="first"><span>1</span> offer its guests easy access to shopping
+                complex, ATMs, <br>filling stations, restaurants
+                and other places of entertainment</p>`,
     }, {
         image: "./home_images/head_2.jpg",
         title: "",
-        description: "<p><span>3</span> located in Bela Bela township</p>",
+        description: `<p class="second"><span><i class="fa-solid fa-bath"></i></span> All rooms have
+                bathroom and TV with selected
+                satellite channels.</p>`,
     }, {
         image: "./home_images/head_3.jpg",
         title: "",
-        description: "<p><span>4</span> located in Bela Bela township</p>",
+        description: `<p class="third"><span><i class="fa-solid fa-house"></i></span> Helgeo Guesthouse offers comfortable and affordable accommodation for all.</p>`,
+    }, {
+        image: "./home_images/head_4.jpg",
+        title: "",
+        description: `<p class="last"><span><i class="fa-solid fa-store"></i></span> We offer guests easy access to shopping
+                complex, ATMs, <br>filling stations, restaurants
+                and other places of entertainment.</p>`,
     }, ]
     const welcomeSlide = document.querySelector('.home-slide');
     const description = document.querySelector('.description');
     let count = 0;
 
+    setTimeout(() => {
+        document.querySelector('.first').classList.add("show-point");
+    }, 1000);
+
     function homeSlide() {
         count++;
         if (count > imagesObject.length - 1) {
-            count = 0
+            count = 0;
+            welcomeSlide.style.backgroundImage = `url(${imagesObject[count].image})`;
             description.innerHTML = "";
-            description.innerHTML = `<p><span>1</span> located in Bela Bela township</p>`;
-        };
-        welcomeSlide.style.backgroundImage = `url(${imagesObject[count].image})`;
-        description.innerHTML += `${imagesObject[count].description}`;
+            description.innerHTML = `<p class="first"><span><i class="fa-solid fa-person-booth"></i></span> We Accommodate single travellers, couples, friends and family.</p>`;
+            setTimeout(() => {
+                document.querySelector('.first').classList.add("show-point");
+            }, 1000);
+        } else {
+            welcomeSlide.style.backgroundImage = `url(${imagesObject[count].image})`;
+            description.innerHTML += `${imagesObject[count].description}`;
+            setTimeout(() => {
+                document.querySelector('.second').classList.add("show-point");
+            }, 1000);
+
+            setTimeout(() => {
+                document.querySelector('.third').classList.add("show-point");
+            }, 1000);
+
+            setTimeout(() => {
+                document.querySelector('.last').classList.add("show-point");
+            }, 1000);
+        }
+
     }
 
     setInterval(() => {
@@ -126,35 +272,54 @@ include './components/header.php';
 <div id="start"></div>
 <div class="content">
     <h1>About Us</h1>
-    <div class="fr">
+    <div class="fc">
         <div class="flx-1">
             <p>Helgeo Guesthouse is located in Bela Bela township(28 Moloto street) 2.2 km away from the hot water
-                springs(Warmbaths).<br><br> Helgeo Guesthouse surroundings offer its guests easy access to shopping
+                springs(Warmbaths). Our surroundings offer guests easy access to shopping
                 complex, ATMs, filling stations, restaurants
-                and other places of entertainment.<br><br> Our facilities consist of five self-catering units and seven
+                and other places of entertainment. Our facilities consist of five self-catering units and seven
                 standard rooms, which can accommodate single travellers, couples, friends and family. All rooms have
                 bathroom and TV with selected
                 satellite channels. Helgeo Guesthouse offers comfortable and affordable accommodation for all. This
                 makes Helgeo Guesthouse a prefect traveller's destination of choice.</p>
         </div>
-        <div class="images flx-1">
-            <div class="fr">
-                <div class="img image-bg"></div>
-                <div class="img image-bg"></div>
+        <div class="images fr">
+            <div class="item">
+                <div class="img" id="img-one">
+                    <i class="fa-solid fa-wine-glass"></i>
+                </div>
+                <div class="over-lay">
+                    <p>Enjoy refreshing moments at the kitchen counter and bar chairs.</p>
+                </div>
             </div>
-            <div class="img image-bg"></div>
+            <div class="item">
+                <div class="img" id="img-two">
+                    <i class="fa-solid fa-fire-burner"></i>
+                </div>
+                <div class="over-lay">
+                    <p>Self-cater with our fully-equipped kitchen units and stoves.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img" id="img-three">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div class="over-lay">
+                    <p>Create unforgettable family dinners filled with fun and laughter.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="fr pd-">
         <div class="flx-2">
             <h2>Nearby Facilities</h2>
-            <div class="fr facilities-icons">
+            <!-- <div class="fr facilities-icons">
                 <i class="fa-solid fa-utensils"></i>
                 <i class="fa-solid fa-store"></i>
                 <i class="fa-solid fa-gas-pump"></i>
                 <i class="fa-solid fa-person-swimming"></i>
-            </div>
+            </div> -->
             <div class="fr facility">
                 <img src="https://belamall.co.za/wp-content/uploads/2021/07/logo.png
                     " width="30%">
@@ -217,7 +382,7 @@ include './components/header.php';
 </style>
 <script>
     document.title = "Home";
-    document.querySelectorAll('.header .nav a')[1].classList.add('active-nav');
+    document.querySelectorAll('.header .nav a')[0].classList.add('active-nav');
 </script>
 <?php
 include './components/footer.php';

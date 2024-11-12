@@ -68,7 +68,7 @@ function updateActiveDot() {
 galleryItems.forEach((item, index) => {
     item.addEventListener('click', async() => {
         currentIndex = index;
-        currentCount = 0; // Reset photo index on new category selection
+        currentCount = 0;
         localStorage.setItem('index', currentIndex);
         localStorage.setItem('count', currentCount);
         await activateScroll(currentIndex);
